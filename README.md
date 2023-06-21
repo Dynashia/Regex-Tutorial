@@ -33,6 +33,8 @@ WHEN I reach the end of the tutorial
 
 THEN I find a section about the author and a link to the author’s GitHub profile
 
+https://github.com/Dynashia/Regex-Tutorial/blob/main/Develop/gist-template.md
+
 
 
 
