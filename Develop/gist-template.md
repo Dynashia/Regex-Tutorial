@@ -1,4 +1,4 @@
-# Title (replace with your title)
+# Title (Dynashia's Regex Tutorial)
 
 Introductory paragraph (replace this with your text)
 
@@ -21,9 +21,26 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+A regex is considered a literal, so the pattern must be wrapped in slash characters (/). If we examine the “Matching a Username” regex, you'll see that this is true:
+
+/^[a-z0-9_-]{3,16}$/
 
 ### Anchors
 Anchors belong to the family of regex tokens that don't match any characters, but that assert something about the string or the matching process. Anchors assert that the engine's current position in the string matches a well-determined location: for instance, the beginning of the string, or the end of a line.
+
+The characters ^ and $ are both considered to be anchors.
+
+The ^ anchor signifies a string that begins with the characters that follow it. This could be in one of two formats:
+
+An exact string match, such as ^The, where the strings "The" or "The person" match, but "the" and "the person" do not. This is because a regex is case-sensitive.
+
+A range of possible matches, displayed using bracket expressions. We'll discuss this in the next section.
+
+The $ anchor signifies a string that ends with the characters that precede it. Just as with the ^ character, it can be preceded by an exact string or a range of possible matches.
+
+So in our “Matching a Username” regex, the string must start and end with something that matches the pattern [a-z0-9_-]. You'll notice that we didn't include the pattern {3,16}, which precedes the $ character. Why? Because this is a special component called a quantifier. We'll come back to quantifiers in a moment.
+
+Let's take a look at the pattern [a-z0-9_-] and see what it mean
 
 ### Quantifiers
 What are quantifiers used for regex?
